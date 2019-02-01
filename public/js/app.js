@@ -1,7 +1,29 @@
 class ProductList extends React.Component {
     render(){
+        const productComponents = Seed.products.map((product) => (
+            <Product
+              key={'product-' + product.id}
+              id={product.id}
+              title={product.title}
+              description={product.description}
+              url={product.url}
+              votes={product.votes}
+              submitterAvatarUrl={product.submitterAvatarUrl}
+              productImageUrl={product.productImageUrl}
+              onVote={this.handleProductUpVote}
+            />
+          ));
         return(<div className= 'ui stackable items' > 
-                <Product />
+                 {productComponents}
+                {/* <Product 
+                id={product.id}
+                title={product.title}
+                description={product.description}
+                url={product.url}
+                votes={product.votes}
+                submitterAvatarUrl={product.submitterAvatarUrl}
+                productImageUrl={product.productImageUrl}
+                /> */}
               </div>
           );
         }
@@ -14,18 +36,26 @@ class ProductList extends React.Component {
         render(){
             return(<div className= 'item' > 
                      <div className= 'image' >
-                     <img src="images/products/image.png"/>
+                     <img src={this.props.productImageUrl}/>
                      </div> 
                        <div className='middle aligned content'>
-                        <div className='description'>
-                           <a>Classy Middy Dress</a>
-                           <p>Amazing and adorable chic-sized dress, delivered in just 3 days.</p>
+                           <div className='header'>
+                             <a>
+                           <i className='large caret up icon' />
+                           </a>
+                              {this.props.votes}
+                            </div> 
+                         <div className='description'>
+                           <a href={this.props.url}>
+                              {this.props.title}
+                           </a>
+                           <p>{this.props.description}</p>
                         </div>
                         <div className='extra'>
                           <span>Submitted by:</span>
                            <img
                             className='ui avatar image'
-                            src='images/avatars/daniel.jpg'
+                            src={this.props.submitterAvatarUrl}
                              />
                         </div>
                      
