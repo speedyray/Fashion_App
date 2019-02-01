@@ -2,7 +2,7 @@
 > A Fashion voting application written in ReactJS
 
 ## Repository Contents
-* Fashion App commit 1
+* Fashion App 
 * [Contact](#speedyray2ray@gmail.com)
 
 ## General info
