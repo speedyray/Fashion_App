@@ -19,7 +19,7 @@ class ProductList extends React.Component {
                        <div className='middle aligned content'>
                         <div className='description'>
                            <a>Classy Middy Dress</a>
-                           <p>Amazing and adorable chic-sized dress, delivered in 3 days.</p>
+                           <p>Amazing and adorable chic-sized dress, delivered in ust 3 days.</p>
                         </div>
                         <div className='extra'>
                           <span>Submitted by:</span>
