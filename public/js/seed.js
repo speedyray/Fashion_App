@@ -7,7 +7,7 @@ window.Seed = (function () {
       {
         id: 1,
         title: 'Halter dress, black white scarf styling',
-        description: 'Amazing and adorable chic-sized dress, delivered in just 3 days.',
+        description: 'Amazing, adorable chic-sized dress, delivered in just 3 days.',
         url: '#',
         votes: generateVoteCount(),
         submitterAvatarUrl: 'images/avatars/daniel.jpg',
